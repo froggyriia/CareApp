@@ -1,0 +1,15 @@
+{
+  "name": "careapp-payments-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CareApp test backend: Stripe Connect, Payments, Billing, Invoicing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "webhooks": "stripe listen --forward-to localhost:4242/webhook --forward-connect-to localhost:4242/webhook"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "stripe": "^23.1.0"
+  }
+}
